@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>explore</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="explore.css">
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<div class="links">
+			<a href="#">HOME</a>
+			<a href="#">ABOUT</a>
+			<a href="#">XPLORE</a>
+			<a href="#">SIGNUP</a>
+			<a href="#">LOGIN</a>
+		</div>
+		<img src="xploreme-logo.png">
+	</header>
+
+<!-- gallery -->
+	<div class="gallery">
+		<div class="mySlides">
+	      <div class="numbertext"></div>
+	      <img src="slide4.jpg" style="width:100%">
+	    </div>
+
+	    <div class="mySlides">
+	      <div class="numbertext"></div>
+	      <img src="slide1.jpg" style="width:100%">
+	    </div>
+
+	    <div class="mySlides">
+	      <div class="numbertext"></div>
+	      <img src="slide2.jpg" style="width:100%">
+	    </div>
+		
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<div class="count-views">
+			<p> Destination TravelHeroes Adventures</p>
+			<div class="one">
+				<h6>14</h6>
+			</div>
+			<div class=two>
+				<h6>31</h6>
+			</div>
+			<div class="three">
+				<h6>19</h6>
+			</div> 
+		</div>
+
+		<div class="text">
+			<h1>EXPLORE INDONESIA</h1>
+			<p>It is known for its beaches, volcanoes and jungles sheltering elephants, <br> tigers and komodo dragons. On the island of java lies Indonesia's <br> vibrant, sprawling capital, jakarta, and the city of Yogyakarta.</p>
+		</div>
+
+		<button class="check" type="button">CHECK LOCATION</button>
+
+		<div class="search-background">
+			<p class="text-search">SEARCH FOR MORE ADVENTURE</p>
+		</div>
+		<input type="text" name="search" placeholder="Ex.Skydiving">
+		<button class="search" type="button">Search</button>
+
+		<div class="avatar-background">
+			<p class="heroes">FEATURED TRAVEL HEROES</p>
+		</div>
+		
+		<div class="avatar">
+			<ul>
+				<li><img src="avatar1.png"></li>
+				<li><img src="avatar2.png"></li>
+				<li><img src="avatar3.png"></li>
+				<li><img src="avatar4.png"></li>
+				<li><img src="avatar5.png"></li>
+			</ul>
+			<ul>
+				<li><img src="avatar6.png"></li>
+				<li><img src="avatar7.png"></li>
+				<li><img src="avatar8.png"></li>
+				<li><img src="avatar9.png"></li>
+				<li><img src="avatar10.png"></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<!-- SCRIPT -->
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>	
+
+<!-- ABOUT -->
+	<div class="about">
+		<img src="slide3.jpg">
+		<h4>HOW IT WORKS?</h4>
+		<p>Register your interest and create a profile. Connect with people <br> with the same interest and establish friendship. Explore culture, <br> nature and places of interests with your travel buddies. Go on <br> adventures with new found friends. <br><br> X-Plore.Me offers variety of adventures on every travel destination<br>that you desire. Using the X-plore.me platform you can connect <br> with Travel Heroes and co-Adveturer, and explore the different<br>culture in each travel destination. X-Plore.Me is a free community <br>based application that explorer can use in searching for their next adventure.</p>
+		<button type="button">VIEW DETAILS</button>
+	</div>
+	<div class="about2">
+		<img class="second-pic" src="slide5.jpg">
+		<h4>WHY X-PLORE.ME?</h4>
+		<p>Our Vision is to establish a friendly secure community for travel<br>Heroes and Adventurers around the world while giving <br>opportunities to the local communities to create livelihood and<br>promote progress.<br><br> At X-plore.me we engage local communities to promote cultural<br>exchange and we believe by creating the platform we can build a <br>strong community of Adventurers to able to<br> connect with the Travel Heroes.<br><br> The team are adventure enthusiasts that keep in finding new <br>places to explore and we want to share what we have experienced<br>in our adventures.</p>
+		<button type="button">VIEW DETAILS</button>
+	</div>
+
+	<!-- FOOTER -->
+	<div class="containner">
+	<div class="footer">
+		<!-- <img src="slide6.jpg"> -->
+		<input type="text" placeholder="Email Address">
+		<button class="search" type="button">Submit Query</button>
+	</div>
+
+	<div class="text-footer">
+		<h5>SUBSCRIBE AND LET'S EXPLORE TOGETHER!</h5>
+	<p>Get exclusive updates and news about the new travel location Aand new travel heroes by subscribing to our website. <br>Monthly emails will be automatically sent to your inbox for every important updates we are going to have! Just  key- <br> in your email address and wait for the monthly updates.</p>
+	</div>
+</div>
+
+<!-- BORDER OF SOCIAL MEDIA ICON -->
+	<div class="icon-border">
+		<div class="copy-right">
+			<p>&#169; XPLORE.ME</p>
+		</div>
+		<div class="social-media-links">
+				<i class="fa fa-facebook-square"></i>
+				<i class="fa fa-twitter-square"></i>
+				<i class="fa fa-instagram"></i>
+			</div>
+	</div>
+</html>
